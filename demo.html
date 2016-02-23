@@ -7,15 +7,31 @@
 </head>
 
 <body>
-    <div id="demo">Hello world</div>
-    <button id="saveButton">Save</button>
+    <div id="container" style="background: gold; padding: 20px;">
+        <div id="content" style="background: coral; padding: 20px;">This is the content
+        </div>
+    </div>
+
+    <a href="http://www.google.com/" target="_blank">Ir a Google</a>
 
     <script>
-   		document.getElementById('demo').contentEditable = true; //permetida al usuario escribir
+    document.getElementById("container").addEventListener("click", function(event) {
+        console.log("Container");
+    });
 
-   		document.getElementById('saveButton').addEventListener("click", function(event){
-   			console.log("Contenido", document.getElementById('demo').innerHTML);
-   		});
+    document.getElementById("content").addEventListener("click", function(event) {
+        console.log("Content");
+    });
+
+     document.body.addEventListener("click", function(event) {
+        console.log("Body");
+    });
+
+     document.getElementsByTagName("a")[0].addEventListener("click", function(event){
+     	console.log("Google link");
+     	event.preventDefault();
+     }); //devuelve un array si hay más de un elemento "a" o "a".[0]
+
     </script>
 </body>
 
