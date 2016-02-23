@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">Hello world</div>
+    <button id="fecha">Update date</button>
+    <button id="addListenerButton">Add listener</button>
+    <button id="removeListenerButton">Remove listener</button>
+    <script>
+    function doSomething() {
+        document.getElementById('demo').innerHTML = new Date();
+    }
+
+    function addListener() {
+        document.getElementById('fecha').addEventListener('click', doSomething);
+    }
+
+    function removeListener() {
+        document.getElementById('fecha').removeEventListener('click', doSomething);
+    }
+
+    document.getElementById('addListenerButton').addEventListener('click', addListener);
+    document.getElementById('removeListenerButton').addEventListener('click', removeListener);
+    </script>
+</body>
+
+</html>
