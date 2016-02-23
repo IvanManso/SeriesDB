@@ -12,20 +12,20 @@
     <button id="addListenerButton">Add listener</button>
     <button id="removeListenerButton">Remove listener</button>
     <script>
-    function doSomething() {
+    function doSomething(event) {
+    	console.log("doSomething", arguments);
         document.getElementById('demo').innerHTML = new Date();
     }
 
-    function addListener() {
+    document.getElementById('addListenerButton').addEventListener('click', function() {
+    	console.log("addListenerButton", arguments);
         document.getElementById('fecha').addEventListener('click', doSomething);
-    }
+    });
 
-    function removeListener() {
+    document.getElementById('removeListenerButton').addEventListener('click', function() {
+    	console.log("removeListenerButton", arguments);
         document.getElementById('fecha').removeEventListener('click', doSomething);
-    }
-
-    document.getElementById('addListenerButton').addEventListener('click', addListener);
-    document.getElementById('removeListenerButton').addEventListener('click', removeListener);
+    });
     </script>
 </body>
 
