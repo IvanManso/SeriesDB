@@ -1,0 +1,23 @@
+{
+  "name": "seriesdb",
+  "description": "An awesome clone of The Movies Database to learn HTML5, CSS3 and JavasScript",
+  "main": "index.js",
+  "authors": [
+    "Iván Manso"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/IvanManso/SeriesDB",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6"
+  }
+}
